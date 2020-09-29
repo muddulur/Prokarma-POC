@@ -30,14 +30,15 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO{
-	private final String INDEX = "employee_data";
-	  private final String TYPE = "employees";  
+	  private final String INDEX = "employee_data";
+	           private final String TYPE = "employees";  
 	  
 	  @Autowired
 	  private RestHighLevelClient restHighLevelClient;
 	  @Autowired
 	  private ObjectMapper objectMapper;
 
+	  
 	  public EmployeeDAOImpl(ObjectMapper objectMapper, RestHighLevelClient restHighLevelClient) {
 	    this.objectMapper = objectMapper;
 	    this.restHighLevelClient = restHighLevelClient;
